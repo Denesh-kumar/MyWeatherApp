@@ -1,0 +1,595 @@
+// !$*UTF8*$!
+{
+	archiveVersion = 1;
+	classes = {
+	};
+	objectVersion = 46;
+	objects = {
+
+/* Begin PBXBuildFile section */
+		66200E093815D133D6FD69EF /* libPods-GJDKWeather.a in Frameworks */ = {isa = PBXBuildFile; fileRef = 45F0B54ED4E9425D0455205E /* libPods-GJDKWeather.a */; };
+		711FDC351EC48DBE00BC49B7 /* main.m in Sources */ = {isa = PBXBuildFile; fileRef = 711FDC341EC48DBE00BC49B7 /* main.m */; };
+		711FDC381EC48DBE00BC49B7 /* AppDelegate.m in Sources */ = {isa = PBXBuildFile; fileRef = 711FDC371EC48DBE00BC49B7 /* AppDelegate.m */; };
+		711FDC3B1EC48DBE00BC49B7 /* GJDKHomeViewController.m in Sources */ = {isa = PBXBuildFile; fileRef = 711FDC3A1EC48DBE00BC49B7 /* GJDKHomeViewController.m */; };
+		711FDC3E1EC48DBE00BC49B7 /* Main.storyboard in Resources */ = {isa = PBXBuildFile; fileRef = 711FDC3C1EC48DBE00BC49B7 /* Main.storyboard */; };
+		711FDC401EC48DBE00BC49B7 /* Assets.xcassets in Resources */ = {isa = PBXBuildFile; fileRef = 711FDC3F1EC48DBE00BC49B7 /* Assets.xcassets */; };
+		711FDC431EC48DBE00BC49B7 /* LaunchScreen.storyboard in Resources */ = {isa = PBXBuildFile; fileRef = 711FDC411EC48DBE00BC49B7 /* LaunchScreen.storyboard */; };
+		715E03821EC577A000B1C96C /* GJDKResultViewController.m in Sources */ = {isa = PBXBuildFile; fileRef = 715E03811EC577A000B1C96C /* GJDKResultViewController.m */; };
+		715E03881EC5991F00B1C96C /* GJDKCoreDataBaseManager.xcdatamodeld in Sources */ = {isa = PBXBuildFile; fileRef = 715E03861EC5991F00B1C96C /* GJDKCoreDataBaseManager.xcdatamodeld */; };
+		715E03941EC5A37100B1C96C /* GJDKCoreDBManager.m in Sources */ = {isa = PBXBuildFile; fileRef = 715E03931EC5A37100B1C96C /* GJDKCoreDBManager.m */; };
+		715E03F51EC5B77F00B1C96C /* WeatherDetails+CoreDataProperties.m in Sources */ = {isa = PBXBuildFile; fileRef = 715E03F31EC5B77F00B1C96C /* WeatherDetails+CoreDataProperties.m */; };
+		7199A1FD1EC9ADA9003D9678 /* GDataXMLNode.m in Sources */ = {isa = PBXBuildFile; fileRef = 7199A1FC1EC9ADA9003D9678 /* GDataXMLNode.m */; settings = {COMPILER_FLAGS = "-fno-objc-arc"; }; };
+		7199A1FF1EC9AE2E003D9678 /* libxml2.tbd in Frameworks */ = {isa = PBXBuildFile; fileRef = 7199A1FE1EC9AE2E003D9678 /* libxml2.tbd */; };
+		7199A2021EC9B4B0003D9678 /* GJDKWeatherDetails.m in Sources */ = {isa = PBXBuildFile; fileRef = 7199A2011EC9B4B0003D9678 /* GJDKWeatherDetails.m */; };
+		7199A2051EC9B55E003D9678 /* GJDKWeatherDetailsCollection.m in Sources */ = {isa = PBXBuildFile; fileRef = 7199A2041EC9B55E003D9678 /* GJDKWeatherDetailsCollection.m */; };
+		7199A2081EC9B651003D9678 /* GJDKWeatherDetailsCollectionParser.m in Sources */ = {isa = PBXBuildFile; fileRef = 7199A2071EC9B651003D9678 /* GJDKWeatherDetailsCollectionParser.m */; };
+		7199A20E1EC9E32D003D9678 /* Lightening.gif in Resources */ = {isa = PBXBuildFile; fileRef = 7199A20D1EC9E32D003D9678 /* Lightening.gif */; };
+		7199A2111EC9E39B003D9678 /* GJDKBaseViewController.m in Sources */ = {isa = PBXBuildFile; fileRef = 7199A2101EC9E39B003D9678 /* GJDKBaseViewController.m */; };
+		71A488611EC5CC0D000C98DC /* GJDKDetailViewController.m in Sources */ = {isa = PBXBuildFile; fileRef = 71A488601EC5CC0D000C98DC /* GJDKDetailViewController.m */; };
+		71C80C001EC49AE9005EF4CB /* GJDKWebServiceManager.m in Sources */ = {isa = PBXBuildFile; fileRef = 71C80BFF1EC49AE9005EF4CB /* GJDKWebServiceManager.m */; };
+		71EF20D71EC5D13A0075DC66 /* GJDKWeatherDetailsTableViewCell.m in Sources */ = {isa = PBXBuildFile; fileRef = 71EF20D61EC5D13A0075DC66 /* GJDKWeatherDetailsTableViewCell.m */; };
+/* End PBXBuildFile section */
+
+/* Begin PBXFileReference section */
+		45F0B54ED4E9425D0455205E /* libPods-GJDKWeather.a */ = {isa = PBXFileReference; explicitFileType = archive.ar; includeInIndex = 0; path = "libPods-GJDKWeather.a"; sourceTree = BUILT_PRODUCTS_DIR; };
+		4F3B6889C80CEFF762A19512 /* Pods-GJDKWeather.debug.xcconfig */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text.xcconfig; name = "Pods-GJDKWeather.debug.xcconfig"; path = "Pods/Target Support Files/Pods-GJDKWeather/Pods-GJDKWeather.debug.xcconfig"; sourceTree = "<group>"; };
+		711FDC301EC48DBE00BC49B7 /* GJDKWeather.app */ = {isa = PBXFileReference; explicitFileType = wrapper.application; includeInIndex = 0; path = GJDKWeather.app; sourceTree = BUILT_PRODUCTS_DIR; };
+		711FDC341EC48DBE00BC49B7 /* main.m */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.objc; path = main.m; sourceTree = "<group>"; };
+		711FDC361EC48DBE00BC49B7 /* AppDelegate.h */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.h; path = AppDelegate.h; sourceTree = "<group>"; };
+		711FDC371EC48DBE00BC49B7 /* AppDelegate.m */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.objc; path = AppDelegate.m; sourceTree = "<group>"; };
+		711FDC391EC48DBE00BC49B7 /* GJDKHomeViewController.h */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.h; path = GJDKHomeViewController.h; sourceTree = "<group>"; };
+		711FDC3A1EC48DBE00BC49B7 /* GJDKHomeViewController.m */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.objc; path = GJDKHomeViewController.m; sourceTree = "<group>"; };
+		711FDC3D1EC48DBE00BC49B7 /* Base */ = {isa = PBXFileReference; lastKnownFileType = file.storyboard; name = Base; path = Base.lproj/Main.storyboard; sourceTree = "<group>"; };
+		711FDC3F1EC48DBE00BC49B7 /* Assets.xcassets */ = {isa = PBXFileReference; lastKnownFileType = folder.assetcatalog; path = Assets.xcassets; sourceTree = "<group>"; };
+		711FDC421EC48DBE00BC49B7 /* Base */ = {isa = PBXFileReference; lastKnownFileType = file.storyboard; name = Base; path = Base.lproj/LaunchScreen.storyboard; sourceTree = "<group>"; };
+		711FDC441EC48DBE00BC49B7 /* Info.plist */ = {isa = PBXFileReference; lastKnownFileType = text.plist.xml; path = Info.plist; sourceTree = "<group>"; };
+		715E03801EC577A000B1C96C /* GJDKResultViewController.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = GJDKResultViewController.h; sourceTree = "<group>"; };
+		715E03811EC577A000B1C96C /* GJDKResultViewController.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = GJDKResultViewController.m; sourceTree = "<group>"; };
+		715E03871EC5991F00B1C96C /* GJDKCoreDataBaseManager.xcdatamodel */ = {isa = PBXFileReference; lastKnownFileType = wrapper.xcdatamodel; path = GJDKCoreDataBaseManager.xcdatamodel; sourceTree = "<group>"; };
+		715E03921EC5A37100B1C96C /* GJDKCoreDBManager.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = GJDKCoreDBManager.h; sourceTree = "<group>"; };
+		715E03931EC5A37100B1C96C /* GJDKCoreDBManager.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = GJDKCoreDBManager.m; sourceTree = "<group>"; };
+		715E03F01EC5B77F00B1C96C /* WeatherDetails+CoreDataClass.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; name = "WeatherDetails+CoreDataClass.h"; path = "../WeatherDetails+CoreDataClass.h"; sourceTree = "<group>"; };
+		715E03F11EC5B77F00B1C96C /* WeatherDetails+CoreDataClass.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; name = "WeatherDetails+CoreDataClass.m"; path = "../WeatherDetails+CoreDataClass.m"; sourceTree = "<group>"; };
+		715E03F21EC5B77F00B1C96C /* WeatherDetails+CoreDataProperties.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; name = "WeatherDetails+CoreDataProperties.h"; path = "../WeatherDetails+CoreDataProperties.h"; sourceTree = "<group>"; };
+		715E03F31EC5B77F00B1C96C /* WeatherDetails+CoreDataProperties.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; name = "WeatherDetails+CoreDataProperties.m"; path = "../WeatherDetails+CoreDataProperties.m"; sourceTree = "<group>"; };
+		7199A1FB1EC9ADA9003D9678 /* GDataXMLNode.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = GDataXMLNode.h; sourceTree = "<group>"; };
+		7199A1FC1EC9ADA9003D9678 /* GDataXMLNode.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = GDataXMLNode.m; sourceTree = "<group>"; };
+		7199A1FE1EC9AE2E003D9678 /* libxml2.tbd */ = {isa = PBXFileReference; lastKnownFileType = "sourcecode.text-based-dylib-definition"; name = libxml2.tbd; path = usr/lib/libxml2.tbd; sourceTree = SDKROOT; };
+		7199A2001EC9B4B0003D9678 /* GJDKWeatherDetails.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = GJDKWeatherDetails.h; sourceTree = "<group>"; };
+		7199A2011EC9B4B0003D9678 /* GJDKWeatherDetails.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = GJDKWeatherDetails.m; sourceTree = "<group>"; };
+		7199A2031EC9B55E003D9678 /* GJDKWeatherDetailsCollection.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = GJDKWeatherDetailsCollection.h; sourceTree = "<group>"; };
+		7199A2041EC9B55E003D9678 /* GJDKWeatherDetailsCollection.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = GJDKWeatherDetailsCollection.m; sourceTree = "<group>"; };
+		7199A2061EC9B651003D9678 /* GJDKWeatherDetailsCollectionParser.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = GJDKWeatherDetailsCollectionParser.h; sourceTree = "<group>"; };
+		7199A2071EC9B651003D9678 /* GJDKWeatherDetailsCollectionParser.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = GJDKWeatherDetailsCollectionParser.m; sourceTree = "<group>"; };
+		7199A20D1EC9E32D003D9678 /* Lightening.gif */ = {isa = PBXFileReference; lastKnownFileType = image.gif; path = Lightening.gif; sourceTree = "<group>"; };
+		7199A20F1EC9E39B003D9678 /* GJDKBaseViewController.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = GJDKBaseViewController.h; sourceTree = "<group>"; };
+		7199A2101EC9E39B003D9678 /* GJDKBaseViewController.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = GJDKBaseViewController.m; sourceTree = "<group>"; };
+		71A488571EC5BD19000C98DC /* libsqlite3.0.tbd */ = {isa = PBXFileReference; lastKnownFileType = "sourcecode.text-based-dylib-definition"; name = libsqlite3.0.tbd; path = usr/lib/libsqlite3.0.tbd; sourceTree = SDKROOT; };
+		71A4885F1EC5CC0D000C98DC /* GJDKDetailViewController.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = GJDKDetailViewController.h; sourceTree = "<group>"; };
+		71A488601EC5CC0D000C98DC /* GJDKDetailViewController.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = GJDKDetailViewController.m; sourceTree = "<group>"; };
+		71C80BFE1EC49AE9005EF4CB /* GJDKWebServiceManager.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = GJDKWebServiceManager.h; sourceTree = "<group>"; };
+		71C80BFF1EC49AE9005EF4CB /* GJDKWebServiceManager.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = GJDKWebServiceManager.m; sourceTree = "<group>"; };
+		71EF20D51EC5D13A0075DC66 /* GJDKWeatherDetailsTableViewCell.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = GJDKWeatherDetailsTableViewCell.h; sourceTree = "<group>"; };
+		71EF20D61EC5D13A0075DC66 /* GJDKWeatherDetailsTableViewCell.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = GJDKWeatherDetailsTableViewCell.m; sourceTree = "<group>"; };
+		7A0F432E06AEAF19A72E4831 /* Pods-GJDKWeather.release.xcconfig */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text.xcconfig; name = "Pods-GJDKWeather.release.xcconfig"; path = "Pods/Target Support Files/Pods-GJDKWeather/Pods-GJDKWeather.release.xcconfig"; sourceTree = "<group>"; };
+/* End PBXFileReference section */
+
+/* Begin PBXFrameworksBuildPhase section */
+		711FDC2D1EC48DBB00BC49B7 /* Frameworks */ = {
+			isa = PBXFrameworksBuildPhase;
+			buildActionMask = 2147483647;
+			files = (
+				7199A1FF1EC9AE2E003D9678 /* libxml2.tbd in Frameworks */,
+				66200E093815D133D6FD69EF /* libPods-GJDKWeather.a in Frameworks */,
+			);
+			runOnlyForDeploymentPostprocessing = 0;
+		};
+/* End PBXFrameworksBuildPhase section */
+
+/* Begin PBXGroup section */
+		711FDC271EC48DBA00BC49B7 = {
+			isa = PBXGroup;
+			children = (
+				711FDC321EC48DBE00BC49B7 /* GJDKWeather */,
+				711FDC311EC48DBE00BC49B7 /* Products */,
+				71A488561EC5BD19000C98DC /* Frameworks */,
+				D05F95E81314F4DD289EE3AE /* Pods */,
+			);
+			sourceTree = "<group>";
+		};
+		711FDC311EC48DBE00BC49B7 /* Products */ = {
+			isa = PBXGroup;
+			children = (
+				711FDC301EC48DBE00BC49B7 /* GJDKWeather.app */,
+			);
+			name = Products;
+			sourceTree = "<group>";
+		};
+		711FDC321EC48DBE00BC49B7 /* GJDKWeather */ = {
+			isa = PBXGroup;
+			children = (
+				7199A20B1EC9E313003D9678 /* Resources */,
+				7199A2091EC9DA44003D9678 /* View */,
+				71A488621EC5CEF8000C98DC /* Model */,
+				71C80BFD1EC49AB5005EF4CB /* Helper */,
+				71C80BFC1EC499FC005EF4CB /* Controller */,
+				711FDC361EC48DBE00BC49B7 /* AppDelegate.h */,
+				711FDC371EC48DBE00BC49B7 /* AppDelegate.m */,
+				711FDC3C1EC48DBE00BC49B7 /* Main.storyboard */,
+				711FDC3F1EC48DBE00BC49B7 /* Assets.xcassets */,
+				711FDC411EC48DBE00BC49B7 /* LaunchScreen.storyboard */,
+				711FDC441EC48DBE00BC49B7 /* Info.plist */,
+				711FDC331EC48DBE00BC49B7 /* Supporting Files */,
+			);
+			path = GJDKWeather;
+			sourceTree = "<group>";
+		};
+		711FDC331EC48DBE00BC49B7 /* Supporting Files */ = {
+			isa = PBXGroup;
+			children = (
+				711FDC341EC48DBE00BC49B7 /* main.m */,
+			);
+			name = "Supporting Files";
+			sourceTree = "<group>";
+		};
+		715E03831EC598BF00B1C96C /* WebServiceManager */ = {
+			isa = PBXGroup;
+			children = (
+				71C80BFE1EC49AE9005EF4CB /* GJDKWebServiceManager.h */,
+				71C80BFF1EC49AE9005EF4CB /* GJDKWebServiceManager.m */,
+			);
+			name = WebServiceManager;
+			sourceTree = "<group>";
+		};
+		715E03841EC598D900B1C96C /* DataBaseManager */ = {
+			isa = PBXGroup;
+			children = (
+				715E03851EC598F200B1C96C /* CoreData */,
+			);
+			name = DataBaseManager;
+			sourceTree = "<group>";
+		};
+		715E03851EC598F200B1C96C /* CoreData */ = {
+			isa = PBXGroup;
+			children = (
+				715E03861EC5991F00B1C96C /* GJDKCoreDataBaseManager.xcdatamodeld */,
+				715E03921EC5A37100B1C96C /* GJDKCoreDBManager.h */,
+				715E03931EC5A37100B1C96C /* GJDKCoreDBManager.m */,
+				715E03F01EC5B77F00B1C96C /* WeatherDetails+CoreDataClass.h */,
+				715E03F11EC5B77F00B1C96C /* WeatherDetails+CoreDataClass.m */,
+				715E03F21EC5B77F00B1C96C /* WeatherDetails+CoreDataProperties.h */,
+				715E03F31EC5B77F00B1C96C /* WeatherDetails+CoreDataProperties.m */,
+			);
+			name = CoreData;
+			sourceTree = "<group>";
+		};
+		7199A1FA1EC9AD8B003D9678 /* GDataParser */ = {
+			isa = PBXGroup;
+			children = (
+				7199A1FB1EC9ADA9003D9678 /* GDataXMLNode.h */,
+				7199A1FC1EC9ADA9003D9678 /* GDataXMLNode.m */,
+			);
+			name = GDataParser;
+			sourceTree = "<group>";
+		};
+		7199A2091EC9DA44003D9678 /* View */ = {
+			isa = PBXGroup;
+			children = (
+				71EF20D11EC5CF370075DC66 /* TableViewCell */,
+			);
+			name = View;
+			sourceTree = "<group>";
+		};
+		7199A20A1EC9DA5A003D9678 /* GJDKWeatherDetailsCollectionParser */ = {
+			isa = PBXGroup;
+			children = (
+				7199A2061EC9B651003D9678 /* GJDKWeatherDetailsCollectionParser.h */,
+				7199A2071EC9B651003D9678 /* GJDKWeatherDetailsCollectionParser.m */,
+			);
+			name = GJDKWeatherDetailsCollectionParser;
+			sourceTree = "<group>";
+		};
+		7199A20B1EC9E313003D9678 /* Resources */ = {
+			isa = PBXGroup;
+			children = (
+				7199A20C1EC9E31C003D9678 /* GIF */,
+			);
+			name = Resources;
+			sourceTree = "<group>";
+		};
+		7199A20C1EC9E31C003D9678 /* GIF */ = {
+			isa = PBXGroup;
+			children = (
+				7199A20D1EC9E32D003D9678 /* Lightening.gif */,
+			);
+			name = GIF;
+			sourceTree = "<group>";
+		};
+		71A488561EC5BD19000C98DC /* Frameworks */ = {
+			isa = PBXGroup;
+			children = (
+				7199A1FE1EC9AE2E003D9678 /* libxml2.tbd */,
+				71A488571EC5BD19000C98DC /* libsqlite3.0.tbd */,
+				45F0B54ED4E9425D0455205E /* libPods-GJDKWeather.a */,
+			);
+			name = Frameworks;
+			sourceTree = "<group>";
+		};
+		71A488621EC5CEF8000C98DC /* Model */ = {
+			isa = PBXGroup;
+			children = (
+				7199A2001EC9B4B0003D9678 /* GJDKWeatherDetails.h */,
+				7199A2011EC9B4B0003D9678 /* GJDKWeatherDetails.m */,
+				7199A2031EC9B55E003D9678 /* GJDKWeatherDetailsCollection.h */,
+				7199A2041EC9B55E003D9678 /* GJDKWeatherDetailsCollection.m */,
+			);
+			name = Model;
+			sourceTree = "<group>";
+		};
+		71C80BFC1EC499FC005EF4CB /* Controller */ = {
+			isa = PBXGroup;
+			children = (
+				711FDC391EC48DBE00BC49B7 /* GJDKHomeViewController.h */,
+				711FDC3A1EC48DBE00BC49B7 /* GJDKHomeViewController.m */,
+				715E03801EC577A000B1C96C /* GJDKResultViewController.h */,
+				715E03811EC577A000B1C96C /* GJDKResultViewController.m */,
+				71A4885F1EC5CC0D000C98DC /* GJDKDetailViewController.h */,
+				71A488601EC5CC0D000C98DC /* GJDKDetailViewController.m */,
+				7199A20F1EC9E39B003D9678 /* GJDKBaseViewController.h */,
+				7199A2101EC9E39B003D9678 /* GJDKBaseViewController.m */,
+			);
+			name = Controller;
+			sourceTree = "<group>";
+		};
+		71C80BFD1EC49AB5005EF4CB /* Helper */ = {
+			isa = PBXGroup;
+			children = (
+				7199A20A1EC9DA5A003D9678 /* GJDKWeatherDetailsCollectionParser */,
+				7199A1FA1EC9AD8B003D9678 /* GDataParser */,
+				715E03841EC598D900B1C96C /* DataBaseManager */,
+				715E03831EC598BF00B1C96C /* WebServiceManager */,
+			);
+			name = Helper;
+			sourceTree = "<group>";
+		};
+		71EF20D11EC5CF370075DC66 /* TableViewCell */ = {
+			isa = PBXGroup;
+			children = (
+				71EF20D51EC5D13A0075DC66 /* GJDKWeatherDetailsTableViewCell.h */,
+				71EF20D61EC5D13A0075DC66 /* GJDKWeatherDetailsTableViewCell.m */,
+			);
+			name = TableViewCell;
+			sourceTree = "<group>";
+		};
+		D05F95E81314F4DD289EE3AE /* Pods */ = {
+			isa = PBXGroup;
+			children = (
+				4F3B6889C80CEFF762A19512 /* Pods-GJDKWeather.debug.xcconfig */,
+				7A0F432E06AEAF19A72E4831 /* Pods-GJDKWeather.release.xcconfig */,
+			);
+			name = Pods;
+			sourceTree = "<group>";
+		};
+/* End PBXGroup section */
+
+/* Begin PBXNativeTarget section */
+		711FDC2F1EC48DBB00BC49B7 /* GJDKWeather */ = {
+			isa = PBXNativeTarget;
+			buildConfigurationList = 711FDC471EC48DBE00BC49B7 /* Build configuration list for PBXNativeTarget "GJDKWeather" */;
+			buildPhases = (
+				7AC8C033B5CF24B60161E3D5 /* [CP] Check Pods Manifest.lock */,
+				711FDC2C1EC48DBB00BC49B7 /* Sources */,
+				711FDC2D1EC48DBB00BC49B7 /* Frameworks */,
+				711FDC2E1EC48DBB00BC49B7 /* Resources */,
+				411F2AF6FF937B54696367A5 /* [CP] Embed Pods Frameworks */,
+				EBA82EB5FBBF66C81A76D35A /* [CP] Copy Pods Resources */,
+			);
+			buildRules = (
+			);
+			dependencies = (
+			);
+			name = GJDKWeather;
+			productName = GJDKWeather;
+			productReference = 711FDC301EC48DBE00BC49B7 /* GJDKWeather.app */;
+			productType = "com.apple.product-type.application";
+		};
+/* End PBXNativeTarget section */
+
+/* Begin PBXProject section */
+		711FDC281EC48DBA00BC49B7 /* Project object */ = {
+			isa = PBXProject;
+			attributes = {
+				LastUpgradeCheck = 0820;
+				ORGANIZATIONNAME = Prokarma;
+				TargetAttributes = {
+					711FDC2F1EC48DBB00BC49B7 = {
+						CreatedOnToolsVersion = 8.2.1;
+						DevelopmentTeam = HZHJ2M9393;
+						LastSwiftMigration = 0820;
+						ProvisioningStyle = Automatic;
+					};
+				};
+			};
+			buildConfigurationList = 711FDC2B1EC48DBB00BC49B7 /* Build configuration list for PBXProject "GJDKWeather" */;
+			compatibilityVersion = "Xcode 3.2";
+			developmentRegion = English;
+			hasScannedForEncodings = 0;
+			knownRegions = (
+				en,
+				Base,
+			);
+			mainGroup = 711FDC271EC48DBA00BC49B7;
+			productRefGroup = 711FDC311EC48DBE00BC49B7 /* Products */;
+			projectDirPath = "";
+			projectRoot = "";
+			targets = (
+				711FDC2F1EC48DBB00BC49B7 /* GJDKWeather */,
+			);
+		};
+/* End PBXProject section */
+
+/* Begin PBXResourcesBuildPhase section */
+		711FDC2E1EC48DBB00BC49B7 /* Resources */ = {
+			isa = PBXResourcesBuildPhase;
+			buildActionMask = 2147483647;
+			files = (
+				711FDC431EC48DBE00BC49B7 /* LaunchScreen.storyboard in Resources */,
+				711FDC401EC48DBE00BC49B7 /* Assets.xcassets in Resources */,
+				711FDC3E1EC48DBE00BC49B7 /* Main.storyboard in Resources */,
+				7199A20E1EC9E32D003D9678 /* Lightening.gif in Resources */,
+			);
+			runOnlyForDeploymentPostprocessing = 0;
+		};
+/* End PBXResourcesBuildPhase section */
+
+/* Begin PBXShellScriptBuildPhase section */
+		411F2AF6FF937B54696367A5 /* [CP] Embed Pods Frameworks */ = {
+			isa = PBXShellScriptBuildPhase;
+			buildActionMask = 2147483647;
+			files = (
+			);
+			inputPaths = (
+			);
+			name = "[CP] Embed Pods Frameworks";
+			outputPaths = (
+			);
+			runOnlyForDeploymentPostprocessing = 0;
+			shellPath = /bin/sh;
+			shellScript = "\"${SRCROOT}/Pods/Target Support Files/Pods-GJDKWeather/Pods-GJDKWeather-frameworks.sh\"\n";
+			showEnvVarsInLog = 0;
+		};
+		7AC8C033B5CF24B60161E3D5 /* [CP] Check Pods Manifest.lock */ = {
+			isa = PBXShellScriptBuildPhase;
+			buildActionMask = 2147483647;
+			files = (
+			);
+			inputPaths = (
+			);
+			name = "[CP] Check Pods Manifest.lock";
+			outputPaths = (
+			);
+			runOnlyForDeploymentPostprocessing = 0;
+			shellPath = /bin/sh;
+			shellScript = "diff \"${PODS_PODFILE_DIR_PATH}/Podfile.lock\" \"${PODS_ROOT}/Manifest.lock\" > /dev/null\nif [ $? != 0 ] ; then\n    # print error to STDERR\n    echo \"error: The sandbox is not in sync with the Podfile.lock. Run 'pod install' or update your CocoaPods installation.\" >&2\n    exit 1\nfi\n";
+			showEnvVarsInLog = 0;
+		};
+		EBA82EB5FBBF66C81A76D35A /* [CP] Copy Pods Resources */ = {
+			isa = PBXShellScriptBuildPhase;
+			buildActionMask = 2147483647;
+			files = (
+			);
+			inputPaths = (
+			);
+			name = "[CP] Copy Pods Resources";
+			outputPaths = (
+			);
+			runOnlyForDeploymentPostprocessing = 0;
+			shellPath = /bin/sh;
+			shellScript = "\"${SRCROOT}/Pods/Target Support Files/Pods-GJDKWeather/Pods-GJDKWeather-resources.sh\"\n";
+			showEnvVarsInLog = 0;
+		};
+/* End PBXShellScriptBuildPhase section */
+
+/* Begin PBXSourcesBuildPhase section */
+		711FDC2C1EC48DBB00BC49B7 /* Sources */ = {
+			isa = PBXSourcesBuildPhase;
+			buildActionMask = 2147483647;
+			files = (
+				71A488611EC5CC0D000C98DC /* GJDKDetailViewController.m in Sources */,
+				7199A2021EC9B4B0003D9678 /* GJDKWeatherDetails.m in Sources */,
+				7199A2051EC9B55E003D9678 /* GJDKWeatherDetailsCollection.m in Sources */,
+				715E03821EC577A000B1C96C /* GJDKResultViewController.m in Sources */,
+				7199A2081EC9B651003D9678 /* GJDKWeatherDetailsCollectionParser.m in Sources */,
+				715E03881EC5991F00B1C96C /* GJDKCoreDataBaseManager.xcdatamodeld in Sources */,
+				71C80C001EC49AE9005EF4CB /* GJDKWebServiceManager.m in Sources */,
+				711FDC3B1EC48DBE00BC49B7 /* GJDKHomeViewController.m in Sources */,
+				7199A2111EC9E39B003D9678 /* GJDKBaseViewController.m in Sources */,
+				715E03941EC5A37100B1C96C /* GJDKCoreDBManager.m in Sources */,
+				715E03F51EC5B77F00B1C96C /* WeatherDetails+CoreDataProperties.m in Sources */,
+				7199A1FD1EC9ADA9003D9678 /* GDataXMLNode.m in Sources */,
+				71EF20D71EC5D13A0075DC66 /* GJDKWeatherDetailsTableViewCell.m in Sources */,
+				711FDC381EC48DBE00BC49B7 /* AppDelegate.m in Sources */,
+				711FDC351EC48DBE00BC49B7 /* main.m in Sources */,
+			);
+			runOnlyForDeploymentPostprocessing = 0;
+		};
+/* End PBXSourcesBuildPhase section */
+
+/* Begin PBXVariantGroup section */
+		711FDC3C1EC48DBE00BC49B7 /* Main.storyboard */ = {
+			isa = PBXVariantGroup;
+			children = (
+				711FDC3D1EC48DBE00BC49B7 /* Base */,
+			);
+			name = Main.storyboard;
+			sourceTree = "<group>";
+		};
+		711FDC411EC48DBE00BC49B7 /* LaunchScreen.storyboard */ = {
+			isa = PBXVariantGroup;
+			children = (
+				711FDC421EC48DBE00BC49B7 /* Base */,
+			);
+			name = LaunchScreen.storyboard;
+			sourceTree = "<group>";
+		};
+/* End PBXVariantGroup section */
+
+/* Begin XCBuildConfiguration section */
+		711FDC451EC48DBE00BC49B7 /* Debug */ = {
+			isa = XCBuildConfiguration;
+			buildSettings = {
+				ALWAYS_SEARCH_USER_PATHS = NO;
+				CLANG_ANALYZER_NONNULL = YES;
+				CLANG_CXX_LANGUAGE_STANDARD = "gnu++0x";
+				CLANG_CXX_LIBRARY = "libc++";
+				CLANG_ENABLE_MODULES = YES;
+				CLANG_ENABLE_OBJC_ARC = YES;
+				CLANG_WARN_BOOL_CONVERSION = YES;
+				CLANG_WARN_CONSTANT_CONVERSION = YES;
+				CLANG_WARN_DIRECT_OBJC_ISA_USAGE = YES_ERROR;
+				CLANG_WARN_DOCUMENTATION_COMMENTS = YES;
+				CLANG_WARN_EMPTY_BODY = YES;
+				CLANG_WARN_ENUM_CONVERSION = YES;
+				CLANG_WARN_INFINITE_RECURSION = YES;
+				CLANG_WARN_INT_CONVERSION = YES;
+				CLANG_WARN_OBJC_ROOT_CLASS = YES_ERROR;
+				CLANG_WARN_SUSPICIOUS_MOVE = YES;
+				CLANG_WARN_UNREACHABLE_CODE = YES;
+				CLANG_WARN__DUPLICATE_METHOD_MATCH = YES;
+				"CODE_SIGN_IDENTITY[sdk=iphoneos*]" = "iPhone Developer";
+				COPY_PHASE_STRIP = NO;
+				DEBUG_INFORMATION_FORMAT = dwarf;
+				ENABLE_STRICT_OBJC_MSGSEND = YES;
+				ENABLE_TESTABILITY = YES;
+				GCC_C_LANGUAGE_STANDARD = gnu99;
+				GCC_DYNAMIC_NO_PIC = NO;
+				GCC_NO_COMMON_BLOCKS = YES;
+				GCC_OPTIMIZATION_LEVEL = 0;
+				GCC_PREPROCESSOR_DEFINITIONS = (
+					"DEBUG=1",
+					"$(inherited)",
+				);
+				GCC_WARN_64_TO_32_BIT_CONVERSION = YES;
+				GCC_WARN_ABOUT_RETURN_TYPE = YES_ERROR;
+				GCC_WARN_UNDECLARED_SELECTOR = YES;
+				GCC_WARN_UNINITIALIZED_AUTOS = YES_AGGRESSIVE;
+				GCC_WARN_UNUSED_FUNCTION = YES;
+				GCC_WARN_UNUSED_VARIABLE = YES;
+				IPHONEOS_DEPLOYMENT_TARGET = 10.2;
+				MTL_ENABLE_DEBUG_INFO = YES;
+				ONLY_ACTIVE_ARCH = YES;
+				SDKROOT = iphoneos;
+				TARGETED_DEVICE_FAMILY = "1,2";
+			};
+			name = Debug;
+		};
+		711FDC461EC48DBE00BC49B7 /* Release */ = {
+			isa = XCBuildConfiguration;
+			buildSettings = {
+				ALWAYS_SEARCH_USER_PATHS = NO;
+				CLANG_ANALYZER_NONNULL = YES;
+				CLANG_CXX_LANGUAGE_STANDARD = "gnu++0x";
+				CLANG_CXX_LIBRARY = "libc++";
+				CLANG_ENABLE_MODULES = YES;
+				CLANG_ENABLE_OBJC_ARC = YES;
+				CLANG_WARN_BOOL_CONVERSION = YES;
+				CLANG_WARN_CONSTANT_CONVERSION = YES;
+				CLANG_WARN_DIRECT_OBJC_ISA_USAGE = YES_ERROR;
+				CLANG_WARN_DOCUMENTATION_COMMENTS = YES;
+				CLANG_WARN_EMPTY_BODY = YES;
+				CLANG_WARN_ENUM_CONVERSION = YES;
+				CLANG_WARN_INFINITE_RECURSION = YES;
+				CLANG_WARN_INT_CONVERSION = YES;
+				CLANG_WARN_OBJC_ROOT_CLASS = YES_ERROR;
+				CLANG_WARN_SUSPICIOUS_MOVE = YES;
+				CLANG_WARN_UNREACHABLE_CODE = YES;
+				CLANG_WARN__DUPLICATE_METHOD_MATCH = YES;
+				"CODE_SIGN_IDENTITY[sdk=iphoneos*]" = "iPhone Developer";
+				COPY_PHASE_STRIP = NO;
+				DEBUG_INFORMATION_FORMAT = "dwarf-with-dsym";
+				ENABLE_NS_ASSERTIONS = NO;
+				ENABLE_STRICT_OBJC_MSGSEND = YES;
+				GCC_C_LANGUAGE_STANDARD = gnu99;
+				GCC_NO_COMMON_BLOCKS = YES;
+				GCC_WARN_64_TO_32_BIT_CONVERSION = YES;
+				GCC_WARN_ABOUT_RETURN_TYPE = YES_ERROR;
+				GCC_WARN_UNDECLARED_SELECTOR = YES;
+				GCC_WARN_UNINITIALIZED_AUTOS = YES_AGGRESSIVE;
+				GCC_WARN_UNUSED_FUNCTION = YES;
+				GCC_WARN_UNUSED_VARIABLE = YES;
+				IPHONEOS_DEPLOYMENT_TARGET = 10.2;
+				MTL_ENABLE_DEBUG_INFO = NO;
+				SDKROOT = iphoneos;
+				TARGETED_DEVICE_FAMILY = "1,2";
+				VALIDATE_PRODUCT = YES;
+			};
+			name = Release;
+		};
+		711FDC481EC48DBE00BC49B7 /* Debug */ = {
+			isa = XCBuildConfiguration;
+			baseConfigurationReference = 4F3B6889C80CEFF762A19512 /* Pods-GJDKWeather.debug.xcconfig */;
+			buildSettings = {
+				ASSETCATALOG_COMPILER_APPICON_NAME = AppIcon;
+				CLANG_ENABLE_MODULES = YES;
+				DEVELOPMENT_TEAM = HZHJ2M9393;
+				HEADER_SEARCH_PATHS = /usr/include/libxml2;
+				INFOPLIST_FILE = GJDKWeather/Info.plist;
+				LD_RUNPATH_SEARCH_PATHS = "$(inherited) @executable_path/Frameworks";
+				PRODUCT_BUNDLE_IDENTIFIER = com.prokarma.GJDKWeather;
+				PRODUCT_NAME = "$(TARGET_NAME)";
+			};
+			name = Debug;
+		};
+		711FDC491EC48DBE00BC49B7 /* Release */ = {
+			isa = XCBuildConfiguration;
+			baseConfigurationReference = 7A0F432E06AEAF19A72E4831 /* Pods-GJDKWeather.release.xcconfig */;
+			buildSettings = {
+				ASSETCATALOG_COMPILER_APPICON_NAME = AppIcon;
+				CLANG_ENABLE_MODULES = YES;
+				DEVELOPMENT_TEAM = HZHJ2M9393;
+				HEADER_SEARCH_PATHS = /usr/include/libxml2;
+				INFOPLIST_FILE = GJDKWeather/Info.plist;
+				LD_RUNPATH_SEARCH_PATHS = "$(inherited) @executable_path/Frameworks";
+				PRODUCT_BUNDLE_IDENTIFIER = com.prokarma.GJDKWeather;
+				PRODUCT_NAME = "$(TARGET_NAME)";
+			};
+			name = Release;
+		};
+/* End XCBuildConfiguration section */
+
+/* Begin XCConfigurationList section */
+		711FDC2B1EC48DBB00BC49B7 /* Build configuration list for PBXProject "GJDKWeather" */ = {
+			isa = XCConfigurationList;
+			buildConfigurations = (
+				711FDC451EC48DBE00BC49B7 /* Debug */,
+				711FDC461EC48DBE00BC49B7 /* Release */,
+			);
+			defaultConfigurationIsVisible = 0;
+			defaultConfigurationName = Release;
+		};
+		711FDC471EC48DBE00BC49B7 /* Build configuration list for PBXNativeTarget "GJDKWeather" */ = {
+			isa = XCConfigurationList;
+			buildConfigurations = (
+				711FDC481EC48DBE00BC49B7 /* Debug */,
+				711FDC491EC48DBE00BC49B7 /* Release */,
+			);
+			defaultConfigurationIsVisible = 0;
+			defaultConfigurationName = Release;
+		};
+/* End XCConfigurationList section */
+
+/* Begin XCVersionGroup section */
+		715E03861EC5991F00B1C96C /* GJDKCoreDataBaseManager.xcdatamodeld */ = {
+			isa = XCVersionGroup;
+			children = (
+				715E03871EC5991F00B1C96C /* GJDKCoreDataBaseManager.xcdatamodel */,
+			);
+			currentVersion = 715E03871EC5991F00B1C96C /* GJDKCoreDataBaseManager.xcdatamodel */;
+			path = GJDKCoreDataBaseManager.xcdatamodeld;
+			sourceTree = "<group>";
+			versionGroupType = wrapper.xcdatamodel;
+		};
+/* End XCVersionGroup section */
+	};
+	rootObject = 711FDC281EC48DBA00BC49B7 /* Project object */;
+}
