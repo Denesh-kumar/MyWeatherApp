@@ -304,9 +304,9 @@
 				TargetAttributes = {
 					711FDC2F1EC48DBB00BC49B7 = {
 						CreatedOnToolsVersion = 8.2.1;
-						DevelopmentTeam = HZHJ2M9393;
+						DevelopmentTeam = AU43HTEJU5;
 						LastSwiftMigration = 0820;
-						ProvisioningStyle = Automatic;
+						ProvisioningStyle = Manual;
 					};
 				};
 			};
@@ -531,14 +531,17 @@
 			buildSettings = {
 				ASSETCATALOG_COMPILER_APPICON_NAME = AppIcon;
 				CLANG_ENABLE_MODULES = YES;
-				CODE_SIGN_IDENTITY = "iPhone Developer";
-				DEVELOPMENT_TEAM = HZHJ2M9393;
+				CODE_SIGN_IDENTITY = "iPhone Distribution";
+				"CODE_SIGN_IDENTITY[sdk=iphoneos*]" = "iPhone Distribution";
+				DEVELOPMENT_TEAM = AU43HTEJU5;
 				ENABLE_BITCODE = NO;
 				HEADER_SEARCH_PATHS = /usr/include/libxml2;
 				INFOPLIST_FILE = GJDKWeather/Info.plist;
 				LD_RUNPATH_SEARCH_PATHS = "$(inherited) @executable_path/Frameworks";
 				PRODUCT_BUNDLE_IDENTIFIER = com.prokarma.GJDKWeather;
 				PRODUCT_NAME = "$(TARGET_NAME)";
+				PROVISIONING_PROFILE = "c82b7358-2b4c-43fb-83aa-a24a610148be";
+				PROVISIONING_PROFILE_SPECIFIER = Wildcard;
 			};
 			name = Debug;
 		};
@@ -548,14 +551,17 @@
 			buildSettings = {
 				ASSETCATALOG_COMPILER_APPICON_NAME = AppIcon;
 				CLANG_ENABLE_MODULES = YES;
-				CODE_SIGN_IDENTITY = "iPhone Developer";
-				DEVELOPMENT_TEAM = HZHJ2M9393;
+				CODE_SIGN_IDENTITY = "iPhone Distribution";
+				"CODE_SIGN_IDENTITY[sdk=iphoneos*]" = "iPhone Distribution";
+				DEVELOPMENT_TEAM = AU43HTEJU5;
 				ENABLE_BITCODE = NO;
 				HEADER_SEARCH_PATHS = /usr/include/libxml2;
 				INFOPLIST_FILE = GJDKWeather/Info.plist;
 				LD_RUNPATH_SEARCH_PATHS = "$(inherited) @executable_path/Frameworks";
 				PRODUCT_BUNDLE_IDENTIFIER = com.prokarma.GJDKWeather;
 				PRODUCT_NAME = "$(TARGET_NAME)";
+				PROVISIONING_PROFILE = "c82b7358-2b4c-43fb-83aa-a24a610148be";
+				PROVISIONING_PROFILE_SPECIFIER = Wildcard;
 			};
 			name = Release;
 		};
