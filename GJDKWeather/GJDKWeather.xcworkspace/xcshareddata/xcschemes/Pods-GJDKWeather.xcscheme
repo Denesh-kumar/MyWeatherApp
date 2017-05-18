@@ -17,7 +17,7 @@
                BlueprintIdentifier = "C113C65CD1E9E50AF29C7DBA8621BDFE"
                BuildableName = "libPods-GJDKWeather.a"
                BlueprintName = "Pods-GJDKWeather"
-               ReferencedContainer = "container:Pods.xcodeproj">
+               ReferencedContainer = "container:Pods/Pods.xcodeproj">
             </BuildableReference>
          </BuildActionEntry>
       </BuildActionEntries>
@@ -48,7 +48,7 @@
             BlueprintIdentifier = "C113C65CD1E9E50AF29C7DBA8621BDFE"
             BuildableName = "libPods-GJDKWeather.a"
             BlueprintName = "Pods-GJDKWeather"
-            ReferencedContainer = "container:Pods.xcodeproj">
+            ReferencedContainer = "container:Pods/Pods.xcodeproj">
          </BuildableReference>
       </MacroExpansion>
       <AdditionalOptions>

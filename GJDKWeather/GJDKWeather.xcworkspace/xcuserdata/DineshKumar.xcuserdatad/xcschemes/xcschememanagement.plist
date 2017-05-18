@@ -3,12 +3,15 @@
 <plist version="1.0">
 <dict>
 	<key>SchemeUserState</key>
-	<dict/>
-	<key>SuppressBuildableAutocreation</key>
 	<dict>
-		<key>C113C65CD1E9E50AF29C7DBA8621BDFE</key>
+		<key>GJDKWeather.xcscheme_^#shared#^_</key>
 		<dict>
-			<key>primary</key>
+			<key>orderHint</key>
+			<integer>0</integer>
+		</dict>
+		<key>Pods-GJDKWeather.xcscheme_^#shared#^_</key>
+		<dict>
+			<key>isShown</key>
 			<true/>
 		</dict>
 	</dict>
