@@ -19,6 +19,15 @@
     // Do any additional setup after loading the view, typically from a nib.
 }
 
+- (void)viewWillAppear:(BOOL)animated {
+    if ([[GJDKCoreDBManager fetchSavedWeatherData] count] > 0) {
+        [self.showSavedDataButton setHidden:NO];
+    }
+    else {
+        [self.showSavedDataButton setHidden:YES];
+    }
+}
+
 
 - (void)didReceiveMemoryWarning {
     [super didReceiveMemoryWarning];

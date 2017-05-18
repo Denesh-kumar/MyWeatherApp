@@ -8,6 +8,7 @@
 
 #import <Foundation/Foundation.h>
 #import <CoreData/CoreData.h>
+#import "WeatherDetails+CoreDataClass.h"
 
 @interface GJDKCoreDBManager : NSObject
 
@@ -18,5 +19,7 @@
 + (GJDKCoreDBManager *)sharedCoreDBManagerInstance;
 
 - (void)saveContext;
+
++ (NSMutableArray *)fetchSavedWeatherData;
 
 @end

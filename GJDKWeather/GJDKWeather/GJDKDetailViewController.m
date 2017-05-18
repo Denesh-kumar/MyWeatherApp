@@ -18,22 +18,12 @@
     [super viewDidLoad];
     // Do any additional setup after loading the view.
     self.weatherDetailsTableView.tableFooterView = [[UIView alloc] initWithFrame:CGRectZero];
-    [self fetchSavedData];
+    self.weatherDetailsArray = [[GJDKCoreDBManager fetchSavedWeatherData] mutableCopy];
 }
 
 - (void)didReceiveMemoryWarning {
     [super didReceiveMemoryWarning];
     // Dispose of any resources that can be recreated.
-}
-
-#pragma mark User Defined Methods
-- (void)fetchSavedData {
-    NSManagedObjectContext *managedObjectContext = [GJDKCoreDBManager sharedCoreDBManagerInstance].persistentContainer.viewContext;
-    NSFetchRequest *fetchRequest = [WeatherDetails fetchRequest];
-    NSArray *fetchResultArray = [managedObjectContext executeFetchRequest:fetchRequest error:nil];
-    NSLog(@"%@", fetchResultArray);
-    self.weatherDetailsArray = [fetchResultArray mutableCopy];
-    NSLog(@"%@", self.weatherDetailsArray);
 }
 
 #pragma mark TableView Delegate and Data Source Methods

@@ -72,4 +72,13 @@
     }
 }
 
+#pragma mark Custom methods
+
++ (NSArray *)fetchSavedWeatherData {
+    NSManagedObjectContext *managedObjectContext = [GJDKCoreDBManager sharedCoreDBManagerInstance].persistentContainer.viewContext;
+    NSFetchRequest *fetchRequest = [WeatherDetails fetchRequest];
+    NSArray *fetchResultArray = [managedObjectContext executeFetchRequest:fetchRequest error:nil];
+    return fetchResultArray;
+}
+
 @end
