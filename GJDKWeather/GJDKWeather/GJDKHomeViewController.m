@@ -35,6 +35,19 @@
     }
 }
 
+#pragma mark TextField Delegate Methods
+
+- (BOOL)textField:(UITextField *)textField shouldChangeCharactersInRange:(NSRange)range replacementString:(NSString *)string {
+    if (string.length > 0) {
+        [self.TemperatureButton setEnabled:YES];
+    }
+    else if (string.length == 0) {
+        [self.TemperatureButton setEnabled:NO];
+    }
+    NSLog(@"%lu", textField.text.length);
+    return YES;
+}
+
 #pragma mark Action methods
 
 - (IBAction)TemperatureButtonTapped:(id)sender {

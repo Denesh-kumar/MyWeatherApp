@@ -12,7 +12,7 @@
 #import "GJDKResultViewController.h"
 #import "GJDKDetailViewController.h"
 
-@interface GJDKHomeViewController : GJDKBaseViewController
+@interface GJDKHomeViewController : GJDKBaseViewController<UITextFieldDelegate>
 @property (weak, nonatomic) IBOutlet UITextField *CityNameTextField;
 @property (weak, nonatomic) IBOutlet UIButton *TemperatureButton;
 @property (weak, nonatomic) IBOutlet UIButton *showSavedDataButton;
