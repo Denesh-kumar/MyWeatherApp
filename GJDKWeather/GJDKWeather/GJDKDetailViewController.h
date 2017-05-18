@@ -9,7 +9,7 @@
 #import <UIKit/UIKit.h>
 #import "GJDKBaseViewController.h"
 #import "GJDKWeatherDetailsTableViewCell.h"
-#import "WeatherDetails+CoreDataProperties.h"
+#import "WeatherDetails+CoreDataClass.h"
 #import "GJDKCoreDBManager.h"
 
 @interface GJDKDetailViewController : GJDKBaseViewController<UITableViewDelegate, UITableViewDataSource>
