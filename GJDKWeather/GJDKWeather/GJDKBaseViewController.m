@@ -17,13 +17,15 @@
 - (void)viewDidLoad {
     [super viewDidLoad];
     // Do any additional setup after loading the view.
-    NSString *filePath = [[NSBundle mainBundle] pathForResource:@"Lightening" ofType:@"gif"];
-    NSData *gifData = [NSData dataWithContentsOfFile:filePath];
-    UIWebView *gifWebView = [[UIWebView alloc] initWithFrame:self.view.frame];
-    [gifWebView loadData:gifData MIMEType:@"image/gif" textEncodingName:@"utf-8" baseURL:nil];
-    gifWebView.userInteractionEnabled = NO;
-    [self.view addSubview:gifWebView];
-    [self.view sendSubviewToBack:gifWebView];
+    
+    //Adding gif background
+//    NSString *filePath = [[NSBundle mainBundle] pathForResource:@"Lightening" ofType:@"gif"];
+//    NSData *gifData = [NSData dataWithContentsOfFile:filePath];
+//    UIWebView *gifWebView = [[UIWebView alloc] initWithFrame:self.view.frame];
+//    [gifWebView loadData:gifData MIMEType:@"image/gif" textEncodingName:@"utf-8" baseURL:nil];
+//    gifWebView.userInteractionEnabled = NO;
+//    [self.view addSubview:gifWebView];
+//    [self.view sendSubviewToBack:gifWebView];
 }
 
 - (void)didReceiveMemoryWarning {
