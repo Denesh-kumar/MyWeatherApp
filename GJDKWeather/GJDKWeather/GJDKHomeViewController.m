@@ -20,12 +20,17 @@
 }
 
 - (void)viewWillAppear:(BOOL)animated {
+    [[NSNotificationCenter defaultCenter] addObserver:self selector:@selector(clearCityNameField:) name:@"DataSaved" object:nil];
     if ([[GJDKCoreDBManager fetchSavedWeatherData] count] > 0) {
         [self.showSavedDataButton setHidden:NO];
     }
     else {
         [self.showSavedDataButton setHidden:YES];
     }
+}
+
+- (void)viewDidDisappear:(BOOL)animated {
+    [[NSNotificationCenter defaultCenter] removeObserver:self];
 }
 
 
@@ -42,6 +47,11 @@
             resultViewController.cityWeatherDict = self.cityWeatherDict;
         }
     }
+}
+
+#pragma mark - Notification Methods
+- (void)clearCityNameField:(NSNotification *)notification {
+    [self.CityNameTextField setText:@""];
 }
 
 #pragma mark TextField Delegate Methods

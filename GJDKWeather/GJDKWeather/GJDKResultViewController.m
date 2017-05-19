@@ -50,6 +50,7 @@
         weatherDetails.city = self.cityNameLabel.text;
         weatherDetails.temperature = self.temperatureLabel.text;
         [[GJDKCoreDBManager sharedCoreDBManagerInstance] saveContext];
+        [[NSNotificationCenter defaultCenter] postNotificationName:@"DataSaved" object:self];
         [self.navigationController popViewControllerAnimated:YES];
     }
     else {
