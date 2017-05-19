@@ -22,4 +22,6 @@
 
 + (NSMutableArray *)fetchSavedWeatherData;
 
++ (BOOL)isCityWeatherDetailAlreadyExists:(NSString *)cityId;
+
 @end

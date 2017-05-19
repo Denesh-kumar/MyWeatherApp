@@ -43,12 +43,24 @@
 
 #pragma mark Action Methods
 - (IBAction)saveDataButtonTapped:(id)sender {
-    
-    WeatherDetails *weatherDetails = [[WeatherDetails alloc] initWithContext:[GJDKCoreDBManager sharedCoreDBManagerInstance].persistentContainer.viewContext];
-    weatherDetails.city = self.cityNameLabel.text;
-    weatherDetails.temperature = self.temperatureLabel.text;
-    [[GJDKCoreDBManager sharedCoreDBManagerInstance] saveContext];
-    [self.navigationController popViewControllerAnimated:YES];
+    BOOL isCityWeatherDetailExists = [GJDKCoreDBManager isCityWeatherDetailAlreadyExists:[self.cityWeatherDict valueForKey:@"CityId"]];
+    if (!isCityWeatherDetailExists) {
+        WeatherDetails *weatherDetails = [[WeatherDetails alloc] initWithContext:[GJDKCoreDBManager sharedCoreDBManagerInstance].persistentContainer.viewContext];
+        weatherDetails.cityId = [self.cityWeatherDict valueForKey:@"CityId"];
+        weatherDetails.city = self.cityNameLabel.text;
+        weatherDetails.temperature = self.temperatureLabel.text;
+        [[GJDKCoreDBManager sharedCoreDBManagerInstance] saveContext];
+        [self.navigationController popViewControllerAnimated:YES];
+    }
+    else {
+        UIAlertController *alertViewController = [UIAlertController alertControllerWithTitle:@"Alert" message:@"This City Weather Details Already Exists" preferredStyle:UIAlertControllerStyleAlert];
+        UIAlertAction *okAction = [UIAlertAction actionWithTitle:@"Ok" style:UIAlertActionStyleDefault handler:^(UIAlertAction * _Nonnull action) {
+            [self.navigationController popViewControllerAnimated:YES];
+        }];
+        [alertViewController addAction:okAction];
+        
+        [self presentViewController:alertViewController animated:YES completion:nil];
+    }
 }
 
 @end

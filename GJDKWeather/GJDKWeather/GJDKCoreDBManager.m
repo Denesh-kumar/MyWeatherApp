@@ -81,4 +81,13 @@
     return fetchResultArray;
 }
 
++ (BOOL)isCityWeatherDetailAlreadyExists:(NSString *)cityId {
+    NSArray *resultArray = [self fetchSavedWeatherData];
+    NSMutableArray *cityIds = [resultArray valueForKey:@"cityId"];
+    if ([cityIds containsObject:cityId]) {
+        return YES;
+    }
+    return NO;
+}
+
 @end
