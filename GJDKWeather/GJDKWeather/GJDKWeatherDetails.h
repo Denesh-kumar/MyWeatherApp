@@ -14,6 +14,8 @@
 
 @property (nonatomic, strong) NSString *temperature;
 
-- (id)initWithCityName:(NSString *)cityName andWithTemperature:(NSString *)temperature;
+@property (nonatomic, strong) NSString *cityId;
+
+- (id)initWithCityName:(NSString *)cityName withCityId:(NSString *)cityId andWithTemperature:(NSString *)temperature;
 
 @end

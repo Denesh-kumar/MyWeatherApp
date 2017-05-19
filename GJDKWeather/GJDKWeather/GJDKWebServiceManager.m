@@ -10,7 +10,9 @@
 
 #define kBaseURL @"http://api.openweathermap.org/data/2.5/weather?q=%@&appid=8726c36d19324fd1f9e2cf1d359a7760"
 #define kBaseURLXML @"http://api.openweathermap.org/data/2.5/weather?q=%@&appid=8726c36d19324fd1f9e2cf1d359a7760&mode=xml"
-#define kIsJSONService 1
+
+#define kIsJSONService 0
+//#define kIsJSONService 1
 
 @implementation GJDKWebServiceManager
 
@@ -56,10 +58,12 @@
                 NSDictionary *weatherDict = [NSJSONSerialization JSONObjectWithData:data options:kNilOptions error:&error];
                 NSNumber *temperature = [weatherDict valueForKeyPath:@"main.temp"];
                 NSString *cityNameFromDict = [weatherDict valueForKey:@"name"];
+                NSString *cityIdFromDict = [weatherDict valueForKey:@"id"];
                 NSMutableDictionary *resultDict = [[NSMutableDictionary alloc] init]; //ObjectsAndKeys:temperature,
                                             //@"Temperature", cityNameFromDict, @"CityName", nil];
                 [resultDict setObject:temperature forKey:@"Temperature"];
                 [resultDict setObject:[NSString stringWithFormat:@"%@", cityNameFromDict] forKey:@"CityName"];
+                [resultDict setObject:[NSString stringWithFormat:@"%@", cityIdFromDict] forKey:@"CityId"];
                 NSLog(@"%@", resultDict);
                 weatherBlock(resultDict);
             }
@@ -68,10 +72,10 @@
                 GJDKWeatherDetails *weatherDetails = (GJDKWeatherDetails *)[self.weatherDetailsCollection.weatherDetails objectAtIndex:0];
                 NSMutableDictionary *resultDict = [[NSMutableDictionary alloc] init];
                 [resultDict setObject:weatherDetails.cityName forKey:@"CityName"];
+                [resultDict setObject:weatherDetails.cityId forKey:@"CityId"];
                 [resultDict setObject:weatherDetails.temperature forKey:@"Temperature"];
                 NSLog(@"The resulting weathr value is %@", resultDict);
                 weatherBlock(resultDict);
-                
             }
         }
     }];

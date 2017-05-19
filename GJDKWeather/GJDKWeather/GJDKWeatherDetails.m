@@ -10,10 +10,11 @@
 
 @implementation GJDKWeatherDetails
 
-- (id)initWithCityName:(NSString *)cityName andWithTemperature :(NSString *)temperature {
+- (id)initWithCityName:(NSString *)cityName withCityId:(NSString *)cityId andWithTemperature :(NSString *)temperature {
     if ((self = [super init])) {
         self.cityName = cityName;
         self.temperature = temperature;
+        self.cityId = cityId;
     }
     return self;
 }

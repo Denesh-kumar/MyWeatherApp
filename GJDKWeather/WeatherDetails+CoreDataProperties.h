@@ -18,6 +18,8 @@ NS_ASSUME_NONNULL_BEGIN
 
 @property (nullable, nonatomic, copy) NSString *temperature;
 @property (nullable, nonatomic, copy) NSString *city;
+@property (nullable, nonatomic, copy) NSString *cityId;
+
 
 @end
 

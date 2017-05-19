@@ -45,7 +45,6 @@
 - (IBAction)saveDataButtonTapped:(id)sender {
     
     WeatherDetails *weatherDetails = [[WeatherDetails alloc] initWithContext:[GJDKCoreDBManager sharedCoreDBManagerInstance].persistentContainer.viewContext];
-    
     weatherDetails.city = self.cityNameLabel.text;
     weatherDetails.temperature = self.temperatureLabel.text;
     [[GJDKCoreDBManager sharedCoreDBManagerInstance] saveContext];

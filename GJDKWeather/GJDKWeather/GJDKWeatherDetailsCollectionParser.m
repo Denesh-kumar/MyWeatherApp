@@ -20,7 +20,7 @@
     
     GJDKWeatherDetailsCollection *weatherDetailCollection = [[GJDKWeatherDetailsCollection alloc] init];
     
-    NSString *temperatureValue, *cityNameValue;
+    NSString *temperatureValue, *cityNameValue, *cityIdValue;
     
     NSArray *weatherDetailCollectionsForTemperature = [doc.rootElement elementsForName:@"temperature"];
     for (GDataXMLElement *weatherDetailCollectionTemperature in weatherDetailCollectionsForTemperature) {
@@ -32,13 +32,16 @@
     }
     
     
-    NSArray *weatherDetailCollectionsForCityName = [doc.rootElement elementsForName:@"city"];
-    for (GDataXMLElement *weatherDetailCollectionCityName in weatherDetailCollectionsForCityName) {
-        GDataXMLNode *cityNameNode = (GDataXMLNode *)[weatherDetailCollectionCityName attributeForName:@"name"];
+    NSArray *weatherDetailCollectionsForCity = [doc.rootElement elementsForName:@"city"];
+    for (GDataXMLElement *weatherDetailCollectionCity in weatherDetailCollectionsForCity) {
+        GDataXMLNode *cityNameNode = (GDataXMLNode *)[weatherDetailCollectionCity attributeForName:@"name"];
+        GDataXMLNode *cityIdNode = (GDataXMLNode *)[weatherDetailCollectionCity attributeForName:@"id"];
         cityNameValue = [cityNameNode stringValue];
+        cityIdValue = [cityIdNode stringValue];
     }
     
-    GJDKWeatherDetails *weatherDetails = [[GJDKWeatherDetails alloc] initWithCityName:cityNameValue andWithTemperature:temperatureValue];
+    
+    GJDKWeatherDetails *weatherDetails = [[GJDKWeatherDetails alloc] initWithCityName:cityNameValue withCityId:cityIdValue andWithTemperature:temperatureValue];
     [weatherDetailCollection.weatherDetails addObject:weatherDetails];
     
     return weatherDetailCollection;

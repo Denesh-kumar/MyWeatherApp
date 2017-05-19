@@ -17,5 +17,6 @@
 
 @dynamic temperature;
 @dynamic city;
+@dynamic cityId;
 
 @end

@@ -2,9 +2,10 @@
 <model type="com.apple.IDECoreDataModeler.DataModel" documentVersion="1.0" lastSavedToolsVersion="11759" systemVersion="16A323" minimumToolsVersion="Automatic" sourceLanguage="Objective-C" userDefinedModelVersionIdentifier="">
     <entity name="WeatherDetails" representedClassName="WeatherDetails" syncable="YES" codeGenerationType="class">
         <attribute name="city" optional="YES" attributeType="String" syncable="YES"/>
+        <attribute name="cityId" optional="YES" attributeType="String" syncable="YES"/>
         <attribute name="temperature" optional="YES" attributeType="String" syncable="YES"/>
     </entity>
     <elements>
-        <element name="WeatherDetails" positionX="-63" positionY="-18" width="128" height="73"/>
+        <element name="WeatherDetails" positionX="-63" positionY="-18" width="128" height="90"/>
     </elements>
 </model>
