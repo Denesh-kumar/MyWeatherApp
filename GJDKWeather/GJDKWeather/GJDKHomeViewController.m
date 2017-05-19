@@ -50,7 +50,7 @@
     if (string.length > 0) {
         [self.TemperatureButton setEnabled:YES];
     }
-    else if (string.length == 0) {
+    else if (textField.text.length == 1) {
         [self.TemperatureButton setEnabled:NO];
     }
     NSLog(@"%lu", textField.text.length);
