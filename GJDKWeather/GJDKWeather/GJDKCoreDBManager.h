@@ -26,4 +26,6 @@
 
 + (NSMutableArray *)cityIds;
 
++ (void)deleteAllRecords;
+
 @end

@@ -33,19 +33,27 @@
 #pragma mark User Defined Methods
 - (void)refreshCityWeatherDetails {
     [self.weatherDetailsArray removeAllObjects];
+    
     NSMutableArray *cityIds = [GJDKCoreDBManager cityIds];
+    [GJDKCoreDBManager deleteAllRecords];
+    
     GJDKWebServiceManager *webserviceManager = [GJDKWebServiceManager sharedWebserviceManager];
     [webserviceManager updateListedCityWeatherDetails:cityIds withCompletionHandler:^(NSDictionary *result) {
         NSLog(@"Refreshed Details are %@", result);
         
         NSArray *cityArray = [result valueForKey:@"list"];
-        for (NSDictionary *cityDetail in cityArray) {
+        NSDictionary *cityDetail;
+        for (int index = 0; index < [cityArray count]; index++) {
+            cityDetail = (NSDictionary *)[cityArray objectAtIndex:index];
             NSLog(@"%@", cityDetail);
             WeatherDetails *weatherDetails = [[WeatherDetails alloc] initWithContext:[GJDKCoreDBManager sharedCoreDBManagerInstance].persistentContainer.viewContext];
+            weatherDetails.cityId = [[cityDetail valueForKey:@"id"] stringValue];
             weatherDetails.city = [cityDetail valueForKey:@"name"];
             weatherDetails.temperature = [[cityDetail valueForKeyPath:@"main.temp"] stringValue];
-            [self.weatherDetailsArray addObject:weatherDetails];
+            [[GJDKCoreDBManager sharedCoreDBManagerInstance] saveContext];
         }
+        
+        self.weatherDetailsArray = [[GJDKCoreDBManager fetchSavedWeatherData] mutableCopy];
         
         NSOperationQueue *mainqueue = [NSOperationQueue mainQueue];
         [mainqueue addOperationWithBlock:^{

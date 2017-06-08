@@ -91,6 +91,14 @@
     return NO;
 }
 
++ (void)deleteAllRecords {
+    NSManagedObjectContext *managedObjectContext = [GJDKCoreDBManager sharedCoreDBManagerInstance].persistentContainer.viewContext;
+    NSFetchRequest *fetchRequest = [WeatherDetails fetchRequest];
+    NSBatchDeleteRequest *batchDeleteRequest = [[NSBatchDeleteRequest alloc] initWithFetchRequest:fetchRequest];
+    NSError *error = nil;
+    [managedObjectContext executeRequest:batchDeleteRequest error:&error];
+}
+
 + (NSMutableArray *)cityIds {
     NSArray *resultArray = [self fetchSavedWeatherData];
     NSMutableArray *cityIds = [resultArray valueForKey:@"cityId"];
