@@ -16,6 +16,8 @@
 
 - (void)getWeatherDetails:(NSString *)cityName withCompletionHandler:(void (^)(NSDictionary *result))weatherBlock;
 
+- (void)updateListedCityWeatherDetails:(NSMutableArray *)cityIds withCompletionHandler:(void (^)(NSDictionary *result))cityDetailsBlock;
+
 @property (nonatomic, strong) GJDKWeatherDetailsCollection *weatherDetailsCollection;
 
 @end

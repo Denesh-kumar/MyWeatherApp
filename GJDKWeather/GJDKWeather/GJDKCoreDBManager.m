@@ -82,12 +82,19 @@
 }
 
 + (BOOL)isCityWeatherDetailAlreadyExists:(NSString *)cityId {
-    NSArray *resultArray = [self fetchSavedWeatherData];
-    NSMutableArray *cityIds = [resultArray valueForKey:@"cityId"];
+//    NSArray *resultArray = [self fetchSavedWeatherData];
+//    NSMutableArray *cityIds = [resultArray valueForKey:@"cityId"];
+    NSMutableArray *cityIds = [self cityIds];
     if ([cityIds containsObject:cityId]) {
         return YES;
     }
     return NO;
+}
+
++ (NSMutableArray *)cityIds {
+    NSArray *resultArray = [self fetchSavedWeatherData];
+    NSMutableArray *cityIds = [resultArray valueForKey:@"cityId"];
+    return cityIds;
 }
 
 @end

@@ -10,7 +10,9 @@
 #import "GJDKBaseViewController.h"
 #import "GJDKWeatherDetailsTableViewCell.h"
 #import "WeatherDetails+CoreDataClass.h"
+#import "WeatherDetails+CoreDataProperties.h"
 #import "GJDKCoreDBManager.h"
+#import "GJDKWebServiceManager.h"
 
 @interface GJDKDetailViewController : GJDKBaseViewController<UITableViewDelegate, UITableViewDataSource>
 

@@ -10,9 +10,10 @@
 
 #define kBaseURL @"http://api.openweathermap.org/data/2.5/weather?q=%@&appid=8726c36d19324fd1f9e2cf1d359a7760"
 #define kBaseURLXML @"http://api.openweathermap.org/data/2.5/weather?q=%@&appid=8726c36d19324fd1f9e2cf1d359a7760&mode=xml"
+#define kUpdateCitiesWeatherDetails @"http://api.openweathermap.org/data/2.5/group?id=%@&units=metric&appid=8726c36d19324fd1f9e2cf1d359a7760"
 
-#define kIsJSONService 0
-//#define kIsJSONService 1
+//#define kIsJSONService 0
+#define kIsJSONService 1
 
 @implementation GJDKWebServiceManager
 
@@ -80,6 +81,31 @@
         }
     }];
     
+    [dataTask resume];
+}
+
+- (void)updateListedCityWeatherDetails:(NSMutableArray *)cityIds withCompletionHandler:(void (^)(NSDictionary *))cityDetailsBlock {
+    NSURLSessionConfiguration *sessionConfiguration = [NSURLSessionConfiguration defaultSessionConfiguration];
+    NSURLSession *session = [NSURLSession sessionWithConfiguration:sessionConfiguration];
+    NSString *cityIdsAsStringValue = [cityIds componentsJoinedByString:@","];
+    NSURL *url = nil;
+    
+    if(kIsJSONService == 1) {
+        url = [NSURL URLWithString:[NSString stringWithFormat:kUpdateCitiesWeatherDetails,cityIdsAsStringValue]];
+    }
+    else {
+//        url = [NSURL URLWithString:[NSString stringWithFormat:kBaseURLXML,cityName]];
+    }
+    NSURLSessionDataTask *dataTask = [session dataTaskWithURL:url completionHandler:^(NSData * _Nullable data, NSURLResponse * _Nullable response, NSError * _Nullable error) {
+        if (error != nil) {
+            NSLog(@"%@", [error localizedDescription]);
+        }
+        else {
+            NSError *error;
+            NSDictionary *weatherDict = [NSJSONSerialization JSONObjectWithData:data options:kNilOptions error:&error];
+            cityDetailsBlock(weatherDict);
+        }
+    }];
     [dataTask resume];
 }
 

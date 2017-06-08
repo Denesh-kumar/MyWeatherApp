@@ -24,4 +24,6 @@
 
 + (BOOL)isCityWeatherDetailAlreadyExists:(NSString *)cityId;
 
++ (NSMutableArray *)cityIds;
+
 @end
