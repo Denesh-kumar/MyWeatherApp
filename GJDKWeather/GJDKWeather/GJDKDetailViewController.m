@@ -49,7 +49,8 @@
             WeatherDetails *weatherDetails = [[WeatherDetails alloc] initWithContext:[GJDKCoreDBManager sharedCoreDBManagerInstance].persistentContainer.viewContext];
             weatherDetails.cityId = [[cityDetail valueForKey:@"id"] stringValue];
             weatherDetails.city = [cityDetail valueForKey:@"name"];
-            weatherDetails.temperature = [[cityDetail valueForKeyPath:@"main.temp"] stringValue];
+            NSString *temperature = [[cityDetail valueForKeyPath:@"main.temp"] stringValue];
+            weatherDetails.temperature = [NSString stringWithFormat:@"%@ c", temperature];
             [[GJDKCoreDBManager sharedCoreDBManagerInstance] saveContext];
         }
         
